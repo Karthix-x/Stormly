@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+     <link rel="icon" href="https://www.linkpicture.com/q/321.png" type="public/image/png">
+    
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/style.css">	
+<title>Stormly</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap');
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100vh;
+	 width: 100vw;
+	 background-color: #f4f4f4;
+     font-family: 'Encode Sans SC', sans-serif;
+}
+
+p{ 
+    font-size: 22px;
+    font-weight:bold;
+    color: #000
+}
+
+ .card {
+	 display: grid;
+	 grid-template-columns: 300px;
+	 grid-template-rows: 220px 220px 80px;
+	 grid-template-areas: "image" "text" "stats";
+	 background-color: #fff;
+	 box-shadow: 5px 5px 15px rgba(52, 73, 94, 0.9);
+	 border-radius: 18px;
+	 text-align: center;
+	 cursor: pointer;
+	 transition: 0.3s ease;
+}
+ .card:hover {
+	 transform: scale(1.1);
+	 box-shadow: 5px 5px 15px rgba(44, 62, 80, 0.5);
+}
+ .card-image {
+	 grid-area: image;
+     justify-content: center;
+	 align-items: center;
+	 border-top-left-radius: 15px;
+	 border-top-right-radius: 15px;
+	 background-size: cover;
+}
+ .card-text {
+	 grid-area: text;
+	 margin: 1.5rem;
+     
+}
+ 
+
+ .card-text h1 {
+	font-size: 22px;
+	 margin: 0.5rem;
+}
+ .card-text p {
+	 
+     font-size: 15px;
+    color: #305c8b
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.topleft {
+    position: absolute; 
+    left:5px;
+  	top:0px;
+	width: 10%;
+	height: 19%;
+	object-fit: contain;
+	
+}
+
+#bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+ 
+  img {
+	filter: drop-shadow(5px 5px 5px rgb(80, 80, 80));
+	
+}
+  
+  
+  img:hover {
+	filter: drop-shadow(7px 7px 7px rgb(255, 255, 255));
+  }
+
+
+header{  
+	
+	position: absolute; 
+    align-items: center;
+  	top:10px;
+	
+}
+
+.card1 {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  z-index: 1;
+  background: rgba(46, 54, 68, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  background-clip: padding-box;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+h2{
+  font-size: 13px;
+text-align: right; 
+}
+
+  
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+.card1 {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  z-index: 1;
+  background: rgba(46, 54, 68, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  background-clip: padding-box;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  
+		}
+
+		h2{
+		font-size: 8px;
+		text-align: right; 
+		}
+
+		#quote{
+		font-size: 10px;
+		text-align: left; 
+		}
+	}	
+
+
+
+
+</style>
+
+</head>
+<body>
+
+
+<div  class="bounce">
+<img id="bounce" class="topleft" src="https://www.linkpicture.com/q/321.png"  alt="Stormly">
+</div>
+
+
+
+	<div class="card1">
+		<p id="quote">Your quote of the day </p> 
+		<h2 id="author">-author</h2>
+	   </div>
+
+<div class="floating">
+
+	<div class="card">
+    
+		<div class="card-image">
+      
+       <div id="weathercon">
+      <!-- <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_bknKi1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
+       </div>
+		
+		<div class="card-text">
+			<h3 class="tempStatus">{%tempstatus%} </h3>
+			<h1> <i class="bi bi-geo-fill" ></i> {%location%},{%country%} </h1>
+			<p id="date"> WED | JUL 21 | 10:40 PM</p> <br>
+           
+            <h1 class="temp">{%tempval%}&deg;C </h1>
+        <p class="tempmin_max"> HUMIDITY &nbsp; {%humidity%} %  | MAX &nbsp; {%tempmax%}&deg;C </p>
+		
+		</div>
+
+
+		
+        <script>
+
+		const curDate = document.getElementById("date");
+		let weathercon = document.getElementById("weathercon");
+	
+		const tempStatus = "{%tempstatus%}" ;
+
+		if (tempStatus == "Sunny") {
+			weathercon.innerHTML = "<lottie-player src='https://assets4.lottiefiles.com/packages/lf20_bknKi1.json'  background='transparent'  speed='1'  style='width: 300px; height: 300px;'  loop  autoplay></lottie-player>";
+		}else if (tempStatus == "Clouds"){
+			weathercon.innerHTML = "<lottie-player src='https://assets2.lottiefiles.com/packages/lf20_trr3kzyu.json'  background='transparent'  speed='1'  style='width: 300px; height: 300px;'  loop  autoplay></lottie-player>";
+		}else if (tempStatus == "Rain"){
+			weathercon.innerHTML = "<lottie-player src='https://assets5.lottiefiles.com/packages/lf20_bco9p3ju.json'  background='transparent'  speed='1'  style='width: 300px; height: 300px;'  loop  autoplay></lottie-player>";
+		}else
+			weathercon.innerHTML = "<lottie-player src='https://assets6.lottiefiles.com/temp/lf20_dgjK9i.json'  background='transparent'  speed='1'  style='width: 300px; height: 300px;'  loop  autoplay></lottie-player>";
+
+		const getCurrentDay = () => {
+			var weekday = new Array(7);
+			weekday[0] = "Sun";
+			weekday[1] = "Mon";
+			weekday[2] = "Tue";
+			weekday[3] = "Wed";
+			weekday[4] = "Thu";
+			weekday[5] = "Fri";
+			weekday[6] = "Sat";
+
+			let currentTime = new Date();
+			let day = weekday[currentTime.getDay()];
+			return day;
+		};
+
+			const getCurrentTime = () => {
+
+				var months = [
+				"Jan",
+				"Feb",
+				"Mar",
+				"Apr",
+				"May", 
+				"Jun",
+				"Jul",
+				"Aug",
+				"Sept",
+				"Oct",
+				"Nov",
+				"Dec",
+				];
+				 	var now = new Date();
+					var month = months[now.getMonth() + 1];
+					var date = now.getDate();
+
+					let hours = now.getHours();
+					let mins = now.getMinutes();
+
+					let periods = "AM";
+
+					if (hours > 11) {
+						periods = "PM";
+						if (hours > 12) hours -= 12;
+					}
+
+					if (mins < 10) {
+						mins = "0" + mins;
+					}
+				
+					return `${month} ${date} | ${hours}:${mins} ${periods}`;
+			};
+		
+	 	curDate.innerHTML = getCurrentDay() + " | " +getCurrentTime();
+
+		
+		 const quote = document.querySelector
+    ("#quote");
+    const author = document.querySelector
+    ("#author");
+
+    function getQuote() {
+      fetch("https://quotable.io/random")
+      .then(res => res.json())
+      .then(data =>{
+        quote.innerHTML = "`"+ data.content + "`";
+        author.innerHTML = "- "+ data.author;
+      })
+    }
+    window.onload = getQuote;
+
+		</script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap');
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100vh;
+	 width: 100vw;
+	 background-color: #f4f4f4;
+     font-family: 'Encode Sans SC', sans-serif;
+}
+
+p{ 
+    font-size: 22px;
+    font-weight:bold;
+    color: #000
+}
+
+ .card {
+	 display: grid;
+	 grid-template-columns: 300px;
+	 grid-template-rows: 220px 220px 80px;
+	 grid-template-areas: "image" "text" "stats";
+	 background-color: #fff;
+	 box-shadow: 5px 5px 15px rgba(52, 73, 94, 0.9);
+	 border-radius: 18px;
+	 text-align: center;
+	 cursor: pointer;
+	 transition: 0.3s ease;
+}
+ .card:hover {
+	 transform: scale(1.1);
+	 box-shadow: 5px 5px 15px rgba(44, 62, 80, 0.5);
+}
+ .card-image {
+	 grid-area: image;
+     justify-content: center;
+	 align-items: center;
+	 border-top-left-radius: 15px;
+	 border-top-right-radius: 15px;
+	 background-size: cover;
+}
+ .card-text {
+	 grid-area: text;
+	 margin: 1.5rem;
+     
+}
+ 
+
+ .card-text h1 {
+	
+	 margin: 0.5rem;
+}
+ .card-text p {
+	 
+     font-size: 18px;
+    color: #305c8b
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.topleft {
+    position: absolute; 
+    left:5px;
+  	top:0px;
+	width: 10%;
+	height: 19%;
+	object-fit: contain;
+	
+}
+
+#bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+ 
+  img {
+	filter: drop-shadow(5px 5px 5px rgb(80, 80, 80));
+	
+}
+  
+  
+  img:hover {
+	filter: drop-shadow(7px 7px 7px rgb(255, 255, 255));
+  }
+
